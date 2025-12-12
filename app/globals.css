@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
+h1 { @apply text-4xl font-bold; }
+h2 { @apply text-3xl font-semibold; }
+h3 { @apply text-2xl font-semibold; }
+h4 { @apply text-xl font-medium; }
+h5 { @apply text-lg font-medium; }
+h6 { @apply text-base font-medium; }
 
 body {
   background: var(--background);
@@ -17,7 +23,6 @@ body {
 }
 
 .MuiAccordionSummary-root {
-  /* width: 100% !important; */
   display: flex !important;
   justify-content: flex-start !important;
 }

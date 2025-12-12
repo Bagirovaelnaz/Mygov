@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import "./style.scss"
 
 import { Noto_Sans } from "next/font/google";
+import Footer from "./components/Footer";
 
 const noto = Noto_Sans({
   subsets: ["latin"],
@@ -36,7 +37,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header/>
+      
         {children}
+        <Footer/>
+
       </body>
     </html>
   );

@@ -1,13 +1,13 @@
-
 .button-7 {
   background-color: #0f7ef5;
   border: 1px solid transparent;
   border-radius: 24px;
-  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.15385;
@@ -33,7 +33,7 @@
 }
 
 .button-7:focus {
-  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
 }
 
 .button-7:active {
@@ -41,11 +41,29 @@
   box-shadow: none;
 }
 
-header{
-    .links{
-        a{
-            font-weight: 500;
-            color: red;
-        }
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  background-color: #F2F9FF;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 300px;
+    color: rgb(52 52 95);
+    font-weight: 500;
+    gap: 70px;
+    li{
+      margin-top: 16px;
     }
+    h2 {
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgb(125 143 178);
+    }
+  }
+  #cprt-p{
+    color: rgba(0,0,0,.5);
+    font-weight: 500;
+  }
 }

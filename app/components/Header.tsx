@@ -1,6 +1,5 @@
 import { MdOutlineArrowOutward } from "react-icons/md";
-import AccHeader from "./AccHeader";
-import HomePage from "../home/page";
+import AccHeader from "../components/AccHeader";
 import Service from "../service/page";
 import Resurs from "../resurs/page";
 import News from "../news/page";
@@ -10,7 +9,7 @@ const Header = () => {
   return (
     <div className="sticky">
       <AccHeader />
-      <div className="pl-6 pr-6">
+      <div className="pl-6 pr-6 shadow-[0_1px_2px_0_rgba(0,0,0,0.05)]">
         <div className="flex p-5 items-center justify-between mr-36 ml-36">
           <div>
             <svg
@@ -45,26 +44,21 @@ const Header = () => {
         </div>
       </div>
       <div className="h-auto pl-5 mx-[165px] ">
-        <div className="flex items-center gap-13  space-x-[88px]  color-[#000]  text-[14px] font-bold leading-none">
-          <a href="/homepage">
+        <div className="flex items-center gap-13  space-x-[88px]  color-[#000]  text-[14px] font-medium leading-none pt-6 mb-6">
+          <a href="/h">
             Ana səhifə
-            <HomePage />
           </a>
           <a href="/services">
             Xidmətlər
-            <Service />
           </a>
           <a href="/resurs">
             Resurslar
-            <Resurs />
           </a>
           <a href="/news">
             Xəbərlər
-            <News />
           </a>
           <a href="/contact-us">
             Əlaqə
-            <Contact />
           </a>
         </div>
       </div>
