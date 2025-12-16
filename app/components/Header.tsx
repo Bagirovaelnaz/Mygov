@@ -1,9 +1,6 @@
 import { MdOutlineArrowOutward } from "react-icons/md";
 import AccHeader from "../components/AccHeader";
-import Service from "../service/page";
-import Resurs from "../resurs/page";
-import News from "../news/page";
-import Contact from "../contact/page";
+
 
 const Header = () => {
   return (
