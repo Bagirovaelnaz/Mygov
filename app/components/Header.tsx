@@ -4,7 +4,7 @@ import AccHeader from "../components/AccHeader";
 
 const Header = () => {
   return (
-    <div className="sticky top-0 bg-white pb-[20px] ">
+    <div className="sticky top-0 bg-white pb-[5px] shadow-[0px_0px_2px_rgba(0,0,0,0.3)] z-999">
       <AccHeader />
       <div className="pl-6 pr-6 shadow-[0_1px_2px_0_rgba(0,0,0,0.05)]">
         <div className="flex p-5 items-center justify-between mr-36 ml-36">
