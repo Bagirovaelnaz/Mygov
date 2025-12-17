@@ -14,7 +14,6 @@
   margin: 0;
   outline: none;
   padding: 15px 25px;
-  position: relative;
   text-align: center;
   text-decoration: none;
   user-select: none;
@@ -36,10 +35,6 @@
   box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
 }
 
-.button-7:active {
-  background-color: #0064bd;
-  box-shadow: none;
-}
 
 footer {
   margin-left: auto;
@@ -73,42 +68,38 @@ footer {
     color: #01579b;
     cursor: pointer;
     transition: all;
-    transition-duration: .3s;
-    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    div{
-    border-color: #80b7ef;
-
+    div {
+      border-color: #80b7ef;
     }
 
     img {
       filter: invert(22%) sepia(93%) saturate(4969%) hue-rotate(214deg)
         brightness(89%) contrast(102%);
-        
     }
   }
 }
 
-.info{
+.info {
   margin-left: 80px;
-  img{
-     filter: invert(22%) sepia(93%) saturate(4969%) hue-rotate(214deg)
-        brightness(89%) contrast(102%);
+  img {
+    filter: invert(22%) sepia(93%) saturate(4969%) hue-rotate(214deg)
+      brightness(89%) contrast(102%);
   }
-  div{
+  div {
     font-size: 22px;
     display: flex;
     align-items: center;
     border-bottom: 1.4px solid #8bc1f9;
     padding: 10px;
-    span{
+    span {
       color: #000;
       font-weight: 600;
     }
   }
 }
-
-
 
 .button-5 {
   background-color: #0f7ef5;
@@ -123,33 +114,53 @@ footer {
   padding: 10px;
   font-size: 14px;
   font-weight: 500;
-  position: relative;
   text-align: center;
   text-decoration: none;
   gap: 5px;
 }
 
-
-.news-box{
+.news-box {
   padding: 30px;
- 
-  div{
-    display:flex ;
+
+  div {
+    display: flex;
     gap: 15px;
-    p{
+    p {
       color: #adb2b8;
       font-weight: 500;
     }
-    div{
+    div {
       display: flex;
       flex-direction: column;
     }
   }
-  img{
+  img {
     height: 140px;
     border-radius: 5px;
     width: 128px;
     object-fit: cover;
+  }
+}
 
+.item-list {
+  background-color: #f2f9ff;
+  box-shadow: 0 0 8px #ddd;
+  padding: 10px;
+  h3 {
+    color: #20262d;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  div {
+    color: #001848;
+    padding: 10px 20px;
+    font-size: 17px;
+    text-align: start;
+    &:hover {
+      border: 0 solid #e5e7eb;
+      background-color: #e5e7eb;
+      border-radius: 16px;
+      cursor: pointer;
+    }
   }
 }

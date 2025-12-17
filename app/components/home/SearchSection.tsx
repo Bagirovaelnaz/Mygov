@@ -1,9 +1,93 @@
 "use client";
-import dynamic from "next/dynamic";
-import bg from "../home/bg.svg";
+
+import { useEffect, useState } from "react";
+import UseSearch from "../hooks/UseSearch";
+type SearchItem = {
+  id: string;
+  name: string;
+  key: any;
+  result: string;
+};
+
+type SearchResponse = {
+  my_info?: SearchItem[];
+  payments?: SearchItem[];
+  entities?: SearchItem[];
+  services?: SearchItem[];
+  life_events?: SearchItem[];
+  categories?: SearchItem[];
+  events?: SearchItem[];
+};
+
 const SearchSection = () => {
-  return <div className="container mx-auto bg-[linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)]">
-    </div>;
+  const [inputValue, setInputValue] = useState("");
+  
+
+  const { search, setSearch, data, loading, error } = UseSearch<any>(
+    "https://mygov-api.e-gov.az/dg-compositor-gateway/api/v1/search",
+    "query"
+  );
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      if (inputValue.length >= 3) {
+        setSearch(inputValue);
+      }
+    }, 500);
+
+    return () => clearTimeout(handler);
+  }, [inputValue, setSearch]);
+
+  const resourceTitles: Record<keyof SearchResponse, string> = {
+    my_info: "Məlumatlarım",
+    payments: "Ödənişlər",  
+    entities: "Kategoriyalar",
+    services: "Xidmətlər",
+    life_events: "Həyat hadisələri",
+    categories: "Kategoriyalar",
+    events: "Hadisələr",
+  };
+  const resources = data?.result;
+
+  return (
+    <div className="p-[80px]">
+      <div className="p-7">
+        <input
+          type="search"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Portalda axtarış edin"
+          className="block w-[60%] p-2 ps-9 rounded-3xl bg-neutral-secondary-medium border shadow-xs mx-auto "
+        />
+      </div>
+      <div>
+        <div>
+          
+          {(resources && search?.length > 3) &&
+            (
+              Object.entries(resourceTitles) as [keyof SearchResponse, string][]
+            ).map(([resource, title]) => {
+              const filteredItems = resources.filter(
+                (item: any) => item?.resource === resource
+              );
+
+              if (filteredItems.length === 0) return null;
+
+              return (
+                <div key={resource} className="item-list">
+                  <h3>{title}</h3>
+
+                  {filteredItems.map((item: any) => (
+                    <div key={item.id}>{item.name}</div>
+                  ))}
+                </div>
+              );
+            })}
+
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default SearchSection;

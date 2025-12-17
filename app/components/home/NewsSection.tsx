@@ -1,6 +1,8 @@
-const NewsSection = () => {
+const NewsSection = async () => {
+
+  await fetch('https://mygov-api.e-gov.az/dg-compositor-gateway/api/v1/search?query=test&csrt=17893355420925143115').then((res: any) => res.json()).then(data => console.log(data))
   return (
-    <div className="mx-[90px] mt-[100px]">
+    <div className="mr-[100px] ml-[120px] mt-[100px]">
       <div>
         <h2>Xəbərlər</h2>
         <div className="flex news-box gap-[120px]">
