@@ -1,10 +1,13 @@
+"use client";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import AccHeader from "../components/AccHeader";
-
+import { IoIosMenu, IoMdClose } from "react-icons/io";
+import { useState } from "react";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="sticky top-0 bg-white pb-[5px] shadow-[0px_0px_2px_rgba(0,0,0,0.3)] z-999">
+    <header className="sticky top-0 bg-white pb-[5px] shadow-[0px_0px_2px_rgba(0,0,0,0.3)] z-999">
       <AccHeader />
       <div className="pl-6 pr-6 shadow-[0_1px_2px_0_rgba(0,0,0,0.05)]">
         <div className="flex p-5 items-center justify-between mr-36 ml-36">
@@ -41,25 +44,34 @@ const Header = () => {
         </div>
       </div>
       <div className="h-auto pl-5 mx-[165px] ">
-        <div className="flex items-center gap-13  space-x-[88px]  color-[#000]  text-[14px] font-medium leading-none pt-6 mb-6">
-          <a href="/h">
-            Ana səhifə
-          </a>
-          <a href="/services">
-            Xidmətlər
-          </a>
-          <a href="/resurs">
-            Resurslar
-          </a>
-          <a href="/news">
-            Xəbərlər
-          </a>
-          <a href="/contact-us">
-            Əlaqə
-          </a>
+        <div
+          className={`flex items-center gap-20  color-[#000]  text-[14px] font-medium leading-none pt-6 mb-6 hover:color-[#01579b] links
+  ${open ? "hidden" : ""}`}
+        >
+          <a href="/h">Ana səhifə</a>
+          <a href="/services">Xidmətlər</a>
+          <a href="/resurs">Resurslar</a>
+          <a href="/news">Xəbərlər</a>
+          <a href="/contact-us">Əlaqə</a>
         </div>
       </div>
-    </div>
+      <button className="burger-btn hidden" onClick={() => setOpen(true)}>
+        <IoIosMenu size={26} />
+      </button>
+      <div className={`mobile-sidebar ${open ? "open" : ""}`}>
+        <button className="close-btn" onClick={() => setOpen(false)}>
+          <IoMdClose size={26} />
+        </button>
+
+        <a href="/h">Ana səhifə</a>
+        <a href="/services">Xidmətlər</a>
+        <a href="/resurs">Resurslar</a>
+        <a href="/news">Xəbərlər</a>
+        <a href="/contact-us">Əlaqə</a>
+      </div>
+
+      {open && <div className="overlay" onClick={() => setOpen(false)} />}
+    </header>
   );
 };
 
