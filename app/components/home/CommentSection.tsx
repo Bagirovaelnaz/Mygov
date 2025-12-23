@@ -3,7 +3,7 @@ import { GoArrowUpRight } from "react-icons/go";
 const CommentSection = () => {
   return (
     <div>
-      <div className="mx-[120px] mt-[120px] mb-10">
+      <div className="container mx-auto mb-20">
         <div className="flex flex-col gap-8 mb-10">
           <h2>Rəy bildirin</h2>
 
@@ -22,7 +22,7 @@ const CommentSection = () => {
         </span>
         <span style={{ fontWeight: "500" }}>12.03.2025</span>
       </div>
-      <div className="flex w-full mt-[100px] border-1 border-[#EEF0EF] ">
+      <div className="flex w-full mt-[100px] border-1 border-[#EEF0EF] pages ">
         <a
           href="https://azerbaijan.un.org/az/sdgs"
           className="flex w-full  transform flex-col justify-center border-e border-[#EEF0EF] p-9 "

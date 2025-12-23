@@ -2,10 +2,10 @@ const NewsSection = async () => {
 
   await fetch('https://mygov-api.e-gov.az/dg-compositor-gateway/api/v1/search?query=test&csrt=17893355420925143115').then((res: any) => res.json()).then(data => console.log(data))
   return (
-    <div className=" mt-[100px]">
-      <div className="mx-25">
+    <div className=" mt-[100px] container mx-auto">
+      <div className=" lg:mx-3 ">
         <h2>Xəbərlər</h2>
-        <div className="grid grid-cols-1 grid-rows-1 md:grid-cols-3 news-box p">
+        <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-3 news-box ">
           <div>
             <img src="https://mygov-cdn.e-gov.az/cdn//upcoming-event/azeriqaz_ib.PNG" alt="" />
             <div>

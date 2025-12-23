@@ -110,7 +110,7 @@ const AccHeader = () => {
           </svg>
           <Typography
             component="span"
-            className="flex items-center gap-2.5 pl-2.5"
+            className="flex items-center gap-2.5 pl-2.5 md:gap-8"
           >
             Azərbaycan Respublikasının rəsmi dövlət platforması
             <span style={{ color: "#315ab5" }}>
@@ -119,7 +119,7 @@ const AccHeader = () => {
           </Typography>
         </AccordionSummary>
         <AccordionDetails className="container mx-auto">
-          <div className="flex gap-3.5 p-4  mx-auto w-full ">
+          <div className="flex gap-3.5 p-4  mx-auto w-full acc-header">
             <div>
               <div className="flex items-start gap-2.5">
                 <svg

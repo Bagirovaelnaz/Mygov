@@ -3,6 +3,7 @@ const words = ["cəmiyyət", "xidmətlər"];
 import { useEffect, useState } from "react";
 import UseSearch from "../hooks/UseSearch";
 import TypingEffect from "../hooks/TypingHook";
+import { Button } from "@mui/material";
 
 type SearchItem = {
   id: string;

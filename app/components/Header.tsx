@@ -3,14 +3,17 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import AccHeader from "../components/AccHeader";
 import { IoIosMenu, IoMdClose } from "react-icons/io";
 import { useState } from "react";
+import { RiHomeLine } from "react-icons/ri";
+import { TbCategory } from "react-icons/tb";
+import { PiWallet } from "react-icons/pi";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 bg-white pb-[5px] shadow-[0px_0px_2px_rgba(0,0,0,0.3)] z-999">
+    <header className="sticky top-0 pb-3 bg-white  shadow-[0px_0px_2px_rgba(0,0,0,0.3)] z-999">
       <AccHeader />
       <div className="pl-6 pr-6 shadow-[0_1px_2px_0_rgba(0,0,0,0.05)]">
-        <div className="flex p-5 items-center justify-between mr-36 ml-36">
+        <div className="flex p-5 items-center justify-between container mx-auto">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +38,39 @@ const Header = () => {
               </defs>
             </svg>
           </div>
-          <div className="flex items-center gap-10">
+          <button className="burger-btn hidden " onClick={() => setOpen(true)}>
+            <IoIosMenu size={26} />
+          </button>
+          <div className={`mobile-sidebar ${open ? "open" : ""}`}>
+            <button className="close-btn" onClick={() => setOpen(false)}>
+              <IoMdClose size={26} />
+            </button>
+
+            <a href="/h" className="flex items-center gap-3">
+              {" "}
+              <RiHomeLine />
+              Ana səhifə
+            </a>
+            <a href="/services" className="flex items-center gap-3">
+              {" "}
+              <TbCategory />
+              Xidmətlər
+            </a>
+            <a href="/resurs" className="flex items-center gap-3">
+              {" "}
+              <PiWallet />
+              Resurslar
+            </a>
+            <a href="/news" className="flex items-center gap-3">
+              Xəbərlər
+            </a>
+            <a href="/contact-us" className="flex items-center gap-3">
+              Əlaqə
+            </a>
+          </div>
+
+          {open && <div className="overlay" onClick={() => setOpen(false)} />}
+          <div className="flex items-center gap-10 sm:hidden">
             <span>AZ</span>
             <button className="button-7">
               DAXİL OL <MdOutlineArrowOutward />
@@ -48,29 +83,13 @@ const Header = () => {
           className={`flex items-center gap-20  color-[#000]  text-[14px] font-medium leading-none pt-6 mb-6 hover:color-[#01579b] links
   ${open ? "hidden" : ""}`}
         >
-          <a href="/h">Ana səhifə</a>
-          <a href="/services">Xidmətlər</a>
-          <a href="/resurs">Resurslar</a>
+          <a href="/h"> Ana səhifə</a>
+          <a href="/services"> Xidmətlər</a>
+          <a href="/resurs"> Resurslar</a>
           <a href="/news">Xəbərlər</a>
           <a href="/contact-us">Əlaqə</a>
         </div>
       </div>
-      <button className="burger-btn hidden" onClick={() => setOpen(true)}>
-        <IoIosMenu size={26} />
-      </button>
-      <div className={`mobile-sidebar ${open ? "open" : ""}`}>
-        <button className="close-btn" onClick={() => setOpen(false)}>
-          <IoMdClose size={26} />
-        </button>
-
-        <a href="/h">Ana səhifə</a>
-        <a href="/services">Xidmətlər</a>
-        <a href="/resurs">Resurslar</a>
-        <a href="/news">Xəbərlər</a>
-        <a href="/contact-us">Əlaqə</a>
-      </div>
-
-      {open && <div className="overlay" onClick={() => setOpen(false)} />}
     </header>
   );
 };

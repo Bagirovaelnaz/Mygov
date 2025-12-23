@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="container mx-auto">
-        <div className="grid py-8">
+        <div className="grid py-8 ">
           <div>
             <h2>Ana səhifə</h2>
             <ul>
@@ -67,7 +67,7 @@ const Footer = () => {
                 <a href="">Sayt xəritəsi</a>
               </li>
             </ul>
-            <div className="flex mt-5 gap-3 justify-start">
+            <div className="flex mt-5 gap-3 justify-start ">
               <a href="https://play.google.com/store/apps/details?id=az.gov.my">
                 <svg
                   width="122"
@@ -281,7 +281,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between py-8">
+        <div className="flex justify-between py-8 gap-2.5 lg:flex-col md:justify-center sm:flex-col ">
           <div className="flex gap-3">
             <div className="flex items-center gap-2 rounded-[10px] bg-[#E6EFF7] px-3 py-2">
               <span>400459</span>
@@ -296,7 +296,7 @@ const Footer = () => {
               <span>Orta sərf olunan vaxt</span>
             </div>
           </div>
-          <div className="flex gap-5 ">
+          <div className="flex gap-5 md:justify-center ">
             <a href="https://www.linkedin.com/company/mygovaz">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
