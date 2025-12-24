@@ -2,14 +2,16 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
-import "./style.scss"
+import "./style.scss";
 
 import { Noto_Sans } from "next/font/google";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "./mui/theme";
 
 const noto = Noto_Sans({
   subsets: ["latin"],
-  weight: ["100","200","300","400","500","600","700","800","900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,16 +35,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        
-        <Header/>
-      
-        {children}
-        <Footer/>
+        <ThemeProvider theme={theme}>
+          <Header />
 
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

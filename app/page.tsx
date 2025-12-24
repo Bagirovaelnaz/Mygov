@@ -3,16 +3,16 @@ import HeyatHadiseleri from "./components/home/HeyatHadiseleri";
 import InfoSection  from "./components/home/InfoSection"
 import NewsSection from "./components/home/NewsSection";
 import CommentSection from "./components/home/CommentSection";
-const homepage = () => {
+const Homepage = () => {
   return (
-    <div>
+    <>
       <SearchSection />
       <HeyatHadiseleri/>
       <InfoSection/>
       <NewsSection/>
       <CommentSection/>
-    </div>
+    </>
   );
 };
 
-export default homepage;
+export default Homepage;
