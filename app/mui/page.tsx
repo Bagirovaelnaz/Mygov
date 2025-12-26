@@ -9,8 +9,12 @@ import {
   TextField,
 } from "@mui/material";
 import RadioButton from "./RadioButton";
+import IOSSwitch from "./IOSSwitch";
+import { useState } from "react";
 
 const ThemePage = () => {
+  const [value, setValue] = useState(false);
+
   return (
     <div className="container mx-auto">
       <section>
@@ -70,6 +74,10 @@ const ThemePage = () => {
         <h4>Radiobutton</h4>
         <RadioButton /> <br />
         <FormControlLabel control={<Checkbox />} label="check" />
+        <IOSSwitch
+          checked={value}
+          onChange={(e) => setValue(e.target.checked)}
+        />
       </section>
     </div>
   );
