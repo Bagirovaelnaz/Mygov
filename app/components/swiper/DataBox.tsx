@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import BoxItem from './BoxItem';
 
 export default () => {
   return (
@@ -16,13 +17,13 @@ export default () => {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      scrollbar={{ draggable: false }} 
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide><BoxItem/></SwiperSlide>
+      <SwiperSlide><BoxItem/></SwiperSlide>
+      <SwiperSlide><BoxItem/></SwiperSlide>
       ...
     </Swiper>
   );

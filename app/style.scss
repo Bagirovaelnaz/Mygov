@@ -308,10 +308,12 @@ footer {
 }
 
 .data-section {
+  display: flex;
+  flex-direction: column;
   img {
     width: 90px;
     height: 110px;
-    margin-top: 20px;
+    margin-top: 15px;
     border-radius: 10px;
   }
   .profile-img {
@@ -323,11 +325,10 @@ footer {
     order: 0;
     flex-grow: 0;
   }
-  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #c9defd;
-  height: 196px;
+  height: auto;
   width: 380px;
   margin: 0 auto;
   background: radial-gradient(
@@ -335,4 +336,37 @@ footer {
     rgba(201, 222, 253, 1) 0%,
     rgba(247, 243, 254, 1) 100%
   );
+}
+
+.data-section2 {
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 90px;
+    height: 110px;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+  .profile-img {
+    width: 78px;
+    height: 104px;
+    background: #b1b1b1;
+    border-radius: 8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  height: auto;
+  width: 380px;
+  margin: 0 auto;
+background: var(--Gr-Passport, linear-gradient(286deg, #F1DEE6 0%, #F2F0FD 97.5%));
+}
+.custom-swiper {
+  width: fit-content;
+}
+
+.custom-swiper .swiper-slide {
+  width: auto;
 }
