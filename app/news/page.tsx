@@ -26,7 +26,7 @@ const News = () => {
   };
 
   return (
-    <div className="container mx-auto p-9">
+    <div className="container mx-auto p-9 bg-amber-100">
       <input
         value={query}
         onChange={(e) => setQuery(e.target.value)}
@@ -41,7 +41,9 @@ const News = () => {
       {data?.result?.map((item: NewsItem) => (
         <div key={item.id}>{item.name}</div>
       ))}
+      <h1>Info</h1>
       <DataBox/>
+
     </div>
   );
 };

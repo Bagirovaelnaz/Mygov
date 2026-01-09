@@ -56,10 +56,10 @@ const Footer = () => {
           </div>
           <div>
             <h2>Əlaqə</h2>
-            <ul>
+            <ul >
               <li>
                 <a href="">Tez-tez verilən suallar</a>
-              </li>
+              </li >
               <li>
                 <a href="">Məxfilik Siyasəti</a>
               </li>
@@ -281,22 +281,22 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between py-8 gap-2.5 lg:flex-col md:justify-center sm:flex-col ">
+        <div className="flex  py-4 gap-2.5 justify-between icons  ">
           <div className="flex gap-3">
-            <div className="flex items-center gap-2 rounded-[10px] bg-[#E6EFF7] px-3 py-2">
+            <div className="flex items-center gap-2 rounded-[10px] bg-[#E6EFF7] text-[#4D5E80] px-3 py-2 w-auto">
               <span>400459</span>
               <span>İstifadəçi sayı</span>
             </div>
-            <div className="flex items-center gap-2 rounded-[10px] bg-[#E6EFF7] px-3 py-2">
+            <div className="flex items-center gap-2 rounded-[10px] bg-[#E6EFF7] text-[#4D5E80] px-3 py-2">
               <span>643607</span>
               <span>Səhifə baxış sayı </span>
             </div>
-            <div className="flex items-center gap-2 rounded-[10px] bg-[#E6EFF7] px-3 py-2">
+            <div className="flex items-center gap-2 rounded-[10px] bg-[#E6EFF7] text-[#4D5E80] px-3 py-2">
               <span>3 dəq. 33 san</span>
               <span>Orta sərf olunan vaxt</span>
             </div>
           </div>
-          <div className="flex gap-5 md:justify-center ">
+          <div className="flex gap-5  ">
             <a href="https://www.linkedin.com/company/mygovaz">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -467,7 +467,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex justify-between items-centern py-4">
+        <div className="flex justify-between items-center py-4 copyright">
           <svg className="w-[217px]"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -483,7 +483,7 @@ const Footer = () => {
             ></path>
           </svg>
        
-            <p id="cprt-p">Bütün hüquqlar qorunur - 2025</p>
+            <p id="cprt-p">Bütün hüquqlar qorunur - 2026</p>
        
           <svg className="w-[243px]"
             xmlns="http://www.w3.org/2000/svg"

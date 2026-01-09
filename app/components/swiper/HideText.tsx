@@ -1,5 +1,5 @@
 interface HideGroupProps {
-  visible: boolean; // page component-dən gəlir
+  visible: boolean;
   labels: {
     title: string;
     value: string;
