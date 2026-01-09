@@ -36,7 +36,7 @@ const PassportPage = () => {
         />
       </div>
 
-      <div className="flex justify-between bg-white mt-5 pl-7 rounded-b-[24px] text-[#0F7EF5] w-full font-semibold uppercase leading-5 text-[14px] items-center p-5">
+      <div className="flex justify-between bg-white mt-5 pl-7 rounded-b-3xl text-[#0F7EF5] w-full font-semibold uppercase leading-5 text-[14px] items-center p-5">
         <span>Sənədi yüklə</span>
         <RiDownloadLine />
       </div>

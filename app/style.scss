@@ -269,6 +269,15 @@ footer {
 }
 
 @media (max-width:668px) {
+  header{
+    
+  .links {
+    display: none;
+  }
+  .button-7{
+    display: none;
+  }
+  }
   footer{
     padding: 10px;
     .grid {
