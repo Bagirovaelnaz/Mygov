@@ -7,8 +7,16 @@ import { RiHomeLine } from "react-icons/ri";
 import { TbCategory } from "react-icons/tb";
 import { PiWallet } from "react-icons/pi";
 
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
+import LocaleSwitcher from "./LocaleSwitcher";
+
 const Header = () => {
+  const t = useTranslations("nav");
+  const locale = useLocale();
+
   const [open, setOpen] = useState(false);
+
   return (
     <header className="sticky top-0 pb-3 bg-white  shadow-[0px_0px_2px_rgba(0,0,0,0.3)] z-999">
       <AccHeader />
@@ -64,16 +72,16 @@ const Header = () => {
             <a href="/news" className="flex items-center gap-3">
               Xəbərlər
             </a>
-            <a href="/contact-us" className="flex items-center gap-3">
+            <a href="/contact" className="flex items-center gap-3">
               Əlaqə
             </a>
           </div>
 
           {open && <div className="overlay" onClick={() => setOpen(false)} />}
-          <div className="flex items-center gap-10 sm:hidden">
-            <span>AZ</span>
+          <div className="flex items-center gap-10 ">
+       <LocaleSwitcher/>
             <button className="button-7">
-              DAXİL OL <MdOutlineArrowOutward />
+              {t("login")} <MdOutlineArrowOutward />
             </button>
           </div>
         </div>
@@ -83,11 +91,11 @@ const Header = () => {
           className={`flex items-center gap-20  color-[#000]  text-[14px] font-medium leading-none pt-6 mb-6 hover:color-[#01579b] links
   ${open ? "hidden" : ""}`}
         >
-          <a href="/h"> Ana səhifə</a>
-          <a href="/services"> Xidmətlər</a>
-          <a href="/resurs"> Resurslar</a>
-          <a href="/news">Xəbərlər</a>
-          <a href="/contact-us">Əlaqə</a>
+          <a href={`/${locale}/h`}>{t("home")}</a>
+          <a href={`/${locale}/services`}>{t("services")}</a>
+          <a href={`/${locale}/resurs`}>{t("resources")}</a>
+          <a href={`/${locale}/news`}>{t("news")}</a>
+          <a href={`/${locale}/contact`}>{t("contact")}</a>
         </div>
       </div>
     </header>

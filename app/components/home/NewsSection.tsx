@@ -1,6 +1,6 @@
 const NewsSection = async () => {
 
-  await fetch('https://mygov-api.e-gov.az/dg-compositor-gateway/api/v1/search?query=test&csrt=17893355420925143115').then((res: any) => res.json()).then(data => console.log(data))
+  await fetch('https://mygov-api.e-gov.az/dg-compositor-gateway/api/v1/search?query=test&csrt=17893355420925143115').then((res: any) => res.json())
   return (
     <div className=" mt-[100px] container mx-auto">
       <div className=" lg:mx-3 ">

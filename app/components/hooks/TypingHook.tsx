@@ -17,24 +17,22 @@ const TypingEffect = ({
     let timeout: any;
 
     if (!isDeleting && charIndex < currentWord.length) {
-      // Yazma mərhələsi
+ 
       timeout = setTimeout(() => {
         setText(currentWord.slice(0, charIndex + 1));
         setCharIndex(charIndex + 1);
       }, speed);
     } else if (isDeleting && charIndex > 0) {
-      // Silmə mərhələsi
+     
       timeout = setTimeout(() => {
         setText(currentWord.slice(0, charIndex - 1));
         setCharIndex(charIndex - 1);
       }, speed / 2);
     } else if (!isDeleting && charIndex === currentWord.length) {
-      // Söz tam yazıldı, pauza və sonra silməyə başla
       timeout = setTimeout(() => {
         setIsDeleting(true);
       }, delayBetweenWords);
     } else if (isDeleting && charIndex === 0) {
-      // Söz tam silindi, növbəti sözə keç
       setIsDeleting(false);
       setWordIndex((prev) => (prev + 1) % words.length);
     }
