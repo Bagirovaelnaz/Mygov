@@ -135,7 +135,7 @@ const AccHeader = () => {
                   ></path>
                 </svg>
                 <div>
-                  <h4 className="mb-2 text-[16px] font-semibold text-[#344054] ">
+                  <h4 className="mb-2 font-semibold text-[#344054] ">
                     Rəsmi vebsaytların linkləri .gov.az ilə bitir.
                   </h4>
                   <p>

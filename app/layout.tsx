@@ -13,6 +13,7 @@ import { theme } from "./mui/theme";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { cookies } from "next/headers";
+import AccessibilityMenu from "./components/AccessibilityMenu";
 
 type Props = {
   children: React.ReactNode;
@@ -50,7 +51,7 @@ export default async function LocaleLayout({
   try {
     messages = (await import(`../components/messages/${locale}.json`)).default;
   } catch {
-    console.error(`No messages found for locale: ${locale}`);
+    console.error("Locale not found:", locale);
  }
 
   return (
@@ -60,10 +61,12 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider theme={theme}>
+            <AccessibilityMenu/>
             <Header />
             {children}
             <Footer />
           </ThemeProvider>
+          
         </NextIntlClientProvider>
       </body>
     </html>

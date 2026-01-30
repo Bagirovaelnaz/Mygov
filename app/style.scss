@@ -6,8 +6,8 @@
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
-    sans-serif;
+  font-family:
+    -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.15385;
@@ -268,40 +268,38 @@ footer {
   }
 }
 
-@media (max-width:668px) {
-  header{
-    
-  .links {
-    display: none;
+@media (max-width: 668px) {
+  header {
+    .links {
+      display: none;
+    }
+    .button-7 {
+      display: none;
+    }
   }
-  .button-7{
-    display: none;
-  }
-  }
-  footer{
+  footer {
     padding: 10px;
     .grid {
       grid-template-columns: 1fr;
       gap: 30px;
       margin: 0 auto;
     }
-    .copyright{
+    .copyright {
       align-items: center;
       gap: 10px;
-      #cprt-p{
+      #cprt-p {
         font-size: 14px;
       }
     }
-    .icons{
+    .icons {
       flex-direction: column;
       justify-content: center;
-      div:nth-child(1){
-      justify-content: center;
-      padding-bottom: 7px;
+      div:nth-child(1) {
+        justify-content: center;
+        padding-bottom: 7px;
       }
-      div:nth-child(2){
-      justify-content: center;
-
+      div:nth-child(2) {
+        justify-content: center;
       }
     }
   }
@@ -468,4 +466,40 @@ footer {
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-bottom: 100px solid #0f7ef5;
+}
+
+//&toggle
+.toggle-label {
+  margin-left: 40px;
+  margin-top: 40px;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  position: relative;
+  background-color: #ccc;
+  border-radius: 26px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform ease 0.3s;
+  }
+
+  &:has(input:checked) {
+    &::before {
+      background-color: #0f7ef5;
+    }
+  }
+
+  &:has(input:checked)::before {
+    transform: translateX(24px);
+  }
 }

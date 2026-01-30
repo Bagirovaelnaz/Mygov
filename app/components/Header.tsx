@@ -88,7 +88,7 @@ const Header = () => {
       </div>
       <div className="h-auto pl-5 mx-[165px] ">
         <div
-          className={`flex items-center gap-20  color-[#000]  text-[14px] font-medium leading-none pt-6 mb-6 hover:color-[#01579b] links
+          className={`flex items-center gap-20  color-[#000]   font-medium leading-none pt-6 mb-6 hover:color-[#01579b] links
   ${open ? "hidden" : ""}`}
         >
           <a href={`/${locale}/h`}>{t("home")}</a>
